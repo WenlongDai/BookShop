@@ -1,0 +1,334 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.pure-img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.pure-button-primary {
+  background: rgb(61, 79, 93);
+  color: #fff;
+}
+
+#layout {
+  padding: 0;
+}
+
+.filterHeader {
+  text-align: center;
+  top: auto;
+  margin: 3em auto;
+}
+
+.filterBar {
+  background: rgb(255, 187, 1);
+  color: #fff;
+}
+
+.filterList {
+  margin-top: -140px;
+  margin-left: -100px;
+  padding: 0;
+  list-style: none;
+}
+.filterItem {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+.filterItem a {
+  background: transparent;
+  border: 2px solid rgb(176, 202, 219);
+  color: #fff;
+  margin-top: 1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 85%;
+}
+.filterItem a:hover,
+.filterItem a:focus {
+  border: 2px solid rgb(61, 146, 201);
+  text-decoration: none;
+}
+
+.contentSubhead {
+  text-transform: uppercase;
+  color: #aaa;
+  border-bottom: 1px solid #eee;
+  padding: 5em 0;
+  font-size: 80%;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  float: left;
+  width:600px;
+  height:80px;
+}
+
+.searchBooks {
+  color: #aaa;
+  font-size: 80%;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  float: left;
+  border: 1px solid #ccc;
+  width: 500px;
+  height: 40px;
+}
+
+#searchInput {
+  color: black;
+  letter-spacing: 0.1em;
+  border: 0;
+  background: transparent;
+  width: 450px;
+  height: 40px;
+  margin: 0;
+  line-height: normal;
+  display: inline-block;
+  outline:none;
+}
+
+#searchIcon {
+  width: 40px;
+  height: 40px;
+  background: url(../images/search.png) left center no-repeat;
+  float: left;
+  margin-left: 0px;
+  border: 0;
+}
+
+#searchBtn {
+  width: 100px;
+  height: 40px;
+  border: 0;
+  background: rgb(16, 37, 54);
+  color: white;
+  line-height:40px;
+  text-align: center;
+  padding: 0;
+}
+
+.content {
+  padding: 2em 1em 0;
+}
+
+.book-title {
+  font-size: 2em;
+  color: #222;
+  margin-bottom: 0.2em;
+}
+
+
+.book-images {
+  margin: 1em 0;
+}
+.book-image-meta {
+  margin-top: -3.5em;
+  margin-left: 1em;
+  color: #fff;
+  text-shadow: 0 1px 1px #333;
+}
+
+
+.bookContainer{
+  position: absolute;
+  margin-top:150px;
+  color:#ffffff;
+  width: 600px;
+  background:white;
+}
+
+.bookList{
+    font-size: 0;
+    margin-left: -20px;
+}
+
+.book-li{
+      font-size:14px;
+      background: white;
+      height: 280px;
+      margin: 10px;
+      width: 120px;
+      display: inline-block;
+}
+
+.book-img{
+  width:80px;
+  height:120px;
+  margin-left: 20px;
+}
+
+.book-name{
+  color:black;
+  height:20px;
+  width: 120px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.book-author{
+  color:black;
+  height:20px;
+  width: 120px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.book-price{
+  color:black;
+  height:20px;
+  width: 120px;
+  margin-top: 0px;
+  text-align: center;
+
+}
+
+#buyBtn{
+  height:30px;
+  width: 80px;
+  margin-top: 0px;
+  margin-left: 20px;
+  background:red;
+  color: white;
+}
+
+
+@media (min-width: 48em) {
+  .content {
+      padding: 2em 3em 0;
+      margin-left: 25%;
+  }
+
+  .filterHeader {
+      margin: 80% 2em 0;
+      text-align: right;
+  }
+
+  #filterTitle {
+    position: absolute;
+    color: black;
+    top:0px;
+    left: 5px;
+    letter-spacing: 0.05em;
+  }
+
+  #applyBtn {
+    /*position: fixed;*/
+    /*bottom: 50px;*/
+    /*left:55px;*/
+    height: 40px;
+    width:180px;
+    background: rgb(16, 37, 54);
+    border: 2px solid white;
+    line-height:40px;
+    text-align: center;
+    padding: 0;
+
+  }
+
+  .filterBar {
+      position: fixed;
+      top: 160px;
+      height: 800px;
+      width: 240px;
+  }
+
+  .topbar {
+      position: fixed;
+      top: 0;
+      height: 50px;
+      left:0;
+      right:0;
+      background: rgb(255, 187, 1);
+      z-index:999;
+  }
+
+  .webTitle {
+    color: black;
+    margin-left:10px;
+    margin-top: 10px;
+    letter-spacing: 0.05em;
+  }
+
+  #loginBtn {
+    position: fixed;
+    top: 10px;
+    height: 30px;
+    width:80px;
+    right: 10px;
+    letter-spacing: 0.05em;
+    background: rgb(16, 37, 54);
+    border: 2px solid white;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 85%;
+    line-height:30px;
+    text-align: center;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  #registerBtn {
+    position: fixed;
+    top: 10px;
+    height: 30px;
+    width:100px;
+    right: 100px;
+    letter-spacing: 0.05em;
+    background: rgb(16, 37, 54);
+    border: 2px solid white;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 85%;
+    line-height:30px;
+    text-align: center;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  #logoutBtn {
+    position: fixed;
+    top: 10px;
+    height: 30px;
+    width:90px;
+    right: 210px;
+    letter-spacing: 0.05em;
+    background: rgb(16, 37, 54);
+    border: 2px solid white;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 85%;
+    line-height:30px;
+    text-align: center;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  #orderBtn {
+    position: fixed;
+    top: 10px;
+    height: 30px;
+    width:90px;
+    right: 310px;
+    letter-spacing: 0.05em;
+    background: rgb(16, 37, 54);
+    border: 2px solid white;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 85%;
+    line-height:30px;
+    text-align: center;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  .top-item.user {
+    display: none;
+
+}
+
+}

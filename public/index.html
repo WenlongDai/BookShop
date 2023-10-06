@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A book online shop.">
+    <title>BOOKFAN</title>
+
+    <link rel="stylesheet" href="stylesheets/pure-min.css">
+    <link rel="stylesheet" href="stylesheets/grids-responsive-min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <script src="javascripts/book.js"></script>
+</head>
+<body onload="getbook();">
+
+<div id="layout" class="pure-g">
+    <div class="filterBar pure-u-1 pure-u-md-1-4">
+        <div class="filterHeader">
+            <h1 id="filterTitle">Filter</h1>
+            <nav id="fileterMenu" class="nav">
+                <ul class="filterList">
+                    <li class="filterItem" id="filterDiv">
+                        <p id="filterName" style="color:black; text-align: left;font-size: 9pt">Category</p>
+                        <select id="filterSelect"style="font-size: 9pt; color: #000000;width:180px;height:30px">
+                            <option value ="filterName1">Art</option>
+                            <option value ="filterName2">Biography</option>
+                            <option value ="filterName3">Fiction</option>
+                            <option value ="filterName4">Health</option>
+                            <option value ="filterName5">History</option>
+                            <option value ="filterName6">Science</option>
+                        </select>
+                    </li>
+                    <li class="filterItem" id="authorDiv">
+                        <p id="authorTitle" style="color:black;text-align: left;font-size: 9pt">Author</p>
+                        <input id="authorInput" type="text" name="author"style="font-size: 9pt; color: #000000;width:180px;height:30px">
+                    </li>
+                    <li class="filterItem" id="coverDiv">
+                        <p id="coverTitle" style="color:black;text-align: left;font-size: 9pt">Cover Type</p>
+                        <select id="coverSelect"style="font-size: 9pt; color: #000000;width:180px;height:30px">
+                            <option value ="type1">Hard</option>
+                            <option value ="type2">Soft</option>
+                        </select>
+                    </li>
+                    <li class="filterItem" id="priceDiv">
+                        <p id="priceTitle" style="color:black;text-align: left;font-size: 9pt">Price Range</p>
+                        <input id="minPriceInput" type="text" name="minPrice" placeholder = "From: $" style="font-size: 9pt; color: #000000;width:85px;height:30px">
+                        <input id="maxPriceInput" type="text" name="maxPrice" placeholder = "To: $" style="font-size: 9pt; color: #000000;width:85px;height:30px">
+                    </li>
+                    <li class="filterItem">
+                        <a class="pure-button" id="applyBtn" onclick="filter();">Apply</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="topbar">
+        <h1 class="webTitle">BOOKFAN</h1>
+        <a class="top-item visit" id="loginBtn" href="/login.html">Login</a>
+        <a class="top-item visit" id="registerBtn" href="/register.html">Register</a>
+        <a class="top-item user" id="logoutBtn" onclick="logout();">Logout</a>
+        <a class="top-item user" id="orderBtn" onclick="checkOrder();">Order</a>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+
+        <div id="books" class="books">
+            <div class="contentSubhead">
+                <div class="searchBooks">
+                    <input type="text" id="searchInput">
+                    <input type="button" id="searchIcon"/>
+                </div>
+                <a class="pure-button" id="searchBtn" onclick="searchBook();">Search</a>
+            </div>
+
+            <div class = "bookContainer">
+                <ul class = "bookList">
+
+                </ul>
+            </div>
+        </div>
+</div>
+
+
+</body>
+</html>
