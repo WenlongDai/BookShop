@@ -7,8 +7,11 @@ Select book through "Author,Price,Genre,material"
 
 Frontend:
 HTML and CSS: Used to build the webpage structure and style.
+
 JavaScript: Utilized for client-side interaction and dynamic page updates.
+
 AJAX (Asynchronous JavaScript and XML): Implements asynchronous communication with the backend using the XMLHttpRequest object.
+
 DOM Manipulation: Dynamic manipulation of page elements through JavaScript.
 
 Backend:
