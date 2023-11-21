@@ -5,35 +5,16 @@ Log in/out,sign up function;<br>
 Book database;<br>
 Select book through "Author,Price,Genre,material"
 
+Frontend:
+HTML and CSS: Used to build the webpage structure and style.
+JavaScript: Utilized for client-side interaction and dynamic page updates.
+AJAX (Asynchronous JavaScript and XML): Implements asynchronous communication with the backend using the XMLHttpRequest object.
+DOM Manipulation: Dynamic manipulation of page elements through JavaScript.
 
-index.js:
-This is a Node.js backend routing file created using the Express framework. Here are some of the main ones:
-
-Router instance:
-
-router is a Router instance of Express and is used to create routing handlers.
-GET route '/getbooks' :
-
-The handler is triggered when the client initiates a GET request to '/getbooks'.
-Get the database connection using the connection pool (req.pool.getConnection).
-Execute the query statement SELECT * FROM Book to get information about all books.
-The query result is sent to the client in JSON format.
-POST route '/searchBooks' :
-
-When the client makes a POST request to '/searchBooks', the handler is triggered.
-Obtain database connections using connection pools.
-Gets the search keyword req.body.keyword sent by the client.
-Run the query statement SELECT * FROM Book WHERE book_name LIKE? , fuzzy search using keywords.
-The query result is sent to the client in JSON format.
-POST route '/filterBooks' :
-
-When the client initiates a POST request to '/filterBooks', the handler is triggered.
-Obtain database connections using connection pools.
-Gets filters sent by the client, such as category, author, cover type, minimum price, and maximum price.
-Execute the query statement. SELECT * FROM Book WHERE genre LIKE? AND author LIKE ?  AND cover_type LIKE ? , using filters to query.
-The query result is sent to the client in JSON format.
-Connection pool use:
-
-req.pool.getConnection is used to get the database connection from the connection pool.
-connection release is done via connection.release() to ensure timely release of database connections and avoid connection leaks.
-This routing file handles requests to get the book list, search for the book, and filter the book. In a practical application, you need to be consistent with the database configuration and ensure that a table named 'Book' exists in the database.
+Backend:
+Node.js: JavaScript runtime environment used for building server-side applications.
+Express.js: Web application framework based on Node.js, simplifying the setup of routes, middleware, and other server-side functionalities.
+MySQL: Relational database employed for storing and retrieving book information.
+XHR (XMLHttpRequest): Frontend communicates asynchronously with the backend using the XHR object to fetch data and dynamically update the page.
+JSON: Lightweight data interchange format used for data exchange between frontend and backend.
+In summary, this application follows a typical frontend-backend separation architecture. It employs AJAX technology for data interaction between the frontend and backend. The frontend handles user interactions using JavaScript, sending requests to the backend, and updating the page content. The backend is built using Node.js, with Express.js for routing, MySQL for data storage, and JSON for lightweight data exchange between the frontend and backend.
